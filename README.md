@@ -1,8 +1,7 @@
 # My Nvim configuration
 
-Todo:
--FZF
--LSP
--Line numbers
--surround?
-
+### Todo: ###
+* [ ] FZF
+* [ ] LSP
+* [ ] Line numbers
+* [ ] surround?
