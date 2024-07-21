@@ -2,6 +2,6 @@
 
 ### Todo: ###
 * [ ] FZF
-* [ ] LSP
+* [x] LSP
 * [ ] Line numbers
 * [ ] surround?
