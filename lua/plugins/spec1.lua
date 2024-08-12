@@ -15,24 +15,12 @@ return {
     },
     
     { "nvim-treesitter/nvim-treesitter",
-		opts = {
-			ensure_installed = {
-			"bash",
-			"html",
-			"javascript",
-			"json",
-			"lua",
-			"markdown",
-			"markdown_inline",
-			"python",
-			"query",
-			"regex",
-			"tsx",
-			"typescript",
-			"vim",
-			"yaml",
-			},
-		},
+		build = ":TSUpdate",
+		config = function()
+			require 'nvim-treesitter.configs'.setup {
+				highlight = { enable = true, }
+			}
+		end
     },
 
 	-- LSP
@@ -45,4 +33,9 @@ return {
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/nvim-cmp'},
 	{'L3MON4D3/LuaSnip'},
+
+
+	{'nvim-telescope/telescope.nvim', tag = '0.1.8',
+		dependencies = {'nvim-lua/plenary.nvim'}
+	},
 }

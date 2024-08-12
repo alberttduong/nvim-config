@@ -1,3 +1,5 @@
+vim.g.mapleader = "<Space>"
+
 require("config.lazy")
 local lsp_zero = require('lsp-zero')
 
@@ -20,5 +22,15 @@ require('mason-lspconfig').setup({
 require("config.lsp")
 require("oil").setup()
 
+vim.keymap.set('n', "<leader>v", "<cmd>vs<cr>", { silent = true })
+vim.keymap.set('n', "<leader>h", "<C-w>h", { silent = true })
+vim.keymap.set('n', "<leader>l", "<C-w>l", { silent = true })
+vim.keymap.set('n', "<leader>x", "<cmd>close<cr>", { silent = true })
+
 vim.opt.shiftwidth=4
 vim.opt.tabstop=4
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.signcolumn = "number"
