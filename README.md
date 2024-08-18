@@ -3,5 +3,5 @@
 ### Todo: ###
 * [ ] FZF
 * [x] LSP
-* [ ] Line numbers
-* [ ] surround?
+* [x] Line numbers
+* [ ] Summary

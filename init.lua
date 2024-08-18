@@ -22,10 +22,21 @@ require('mason-lspconfig').setup({
 require("config.lsp")
 require("oil").setup()
 
+-- Splitting windows
+vim.keymap.set('n', "<leader>s", "<cmd>split<cr>", { silent = true })
 vim.keymap.set('n', "<leader>v", "<cmd>vs<cr>", { silent = true })
+
+-- Moving windows
+vim.keymap.set('n', "<leader>j", "<C-w>j", { silent = true })
+vim.keymap.set('n', "<leader>k", "<C-w>k", { silent = true })
 vim.keymap.set('n', "<leader>h", "<C-w>h", { silent = true })
 vim.keymap.set('n', "<leader>l", "<C-w>l", { silent = true })
+
+-- Closing windows
 vim.keymap.set('n', "<leader>x", "<cmd>close<cr>", { silent = true })
+
+-- View sessions
+vim.keymap.set('n', "<leader>p", "<cmd>Telescope neovim-project discover<cr>", { silent = true })
 
 vim.opt.shiftwidth=4
 vim.opt.tabstop=4
