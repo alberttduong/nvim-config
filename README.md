@@ -1,7 +1,23 @@
 # My Nvim configuration
 
-### Todo: ###
-* [ ] FZF
+### Todo ###
 * [x] LSP
 * [x] Line numbers
-* [ ] Summary
+* [ ] Tabs (sleuth?)
+* [ ] Telescope config
+
+### Summary ###
+* Lazy
+* Mason
+  * lsp-zero
+* Nightfox Theme
+* Leader
+* Oil 
+* Treesitter
+* Telescope
+* Neovim Project Manager
+* Keybinds
+  * Windows
+  * Sessions (Nvim Project Manager)
+  * Tabs
+  * Exiting Terminal with ESC

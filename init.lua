@@ -19,6 +19,7 @@ require('mason-lspconfig').setup({
   },
 })
 
+require("config.options")
 require("config.lsp")
 require("oil").setup()
 
@@ -35,8 +36,25 @@ vim.keymap.set('n', "<leader>l", "<C-w>l", { silent = true })
 -- Closing windows
 vim.keymap.set('n', "<leader>x", "<cmd>close<cr>", { silent = true })
 
+-- Tabs
+vim.keymap.set('n', "<leader>n", "<cmd>tabnew<cr>", { silent = true })
+vim.keymap.set('n', "<leader>N", "<cmd>tabc<cr>", { silent = true })
+vim.keymap.set('n', "<leader>H", "<cmd>-tabnext<cr>", { silent = true })
+vim.keymap.set('n', "<leader>L", "<cmd>+tabnext<cr>", { silent = true })
+
 -- View sessions
 vim.keymap.set('n', "<leader>p", "<cmd>Telescope neovim-project discover<cr>", { silent = true })
+
+vim.keymap.set('n', "<leader>o", "<cmd>Oil<cr>", { silent = true })
+vim.keymap.set('n', "<leader>-", "<cmd>Oil<cr>", { silent = true })
+
+-- Save/Quit
+vim.keymap.set('n', "<leader>w", "<cmd>w<cr>", { silent = true })
+vim.keymap.set('n', "<leader>q", "<cmd>q<cr>", { silent = true })
+vim.keymap.set('n', "<leader>Q", "<cmd>qa<cr>", { silent = true })
+
+--Normal Mode
+vim.keymap.set('t', "<ESC>", "<C-\\><C-n>", { silent = true, noremap = true })
 
 vim.opt.shiftwidth=4
 vim.opt.tabstop=4
@@ -45,3 +63,5 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.signcolumn = "number"
+
+vim.opt.clipboard = "unnamedplus"
